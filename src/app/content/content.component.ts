@@ -1,10 +1,12 @@
 import { ApiService } from './../../service/api.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, Injectable, OnInit } from '@angular/core';
 import { IFilme } from 'src/model/ifilme';
-
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 var data : IFilme[] ;
 
 var _service = new ApiService;
+
+var _serviceHttp : HttpClient
 
 
 @Component({
@@ -25,11 +27,14 @@ export class ContentComponent {
 
   service = _service;
 
+  serviceHttp = _serviceHttp;
+
   constructor() { }
 
   
 
   getNome(){
+    //this.filmeResponse = this.service.getMovie(this.title)
     this.filmeResponse = this.service.getMovie(this.title)
     this.dataSource = this.filmeResponse;
     this.title = ""
