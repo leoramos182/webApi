@@ -1,0 +1,18 @@
+table{
+    width: 50%;
+    margin: 0 auto;
+}
+.busca-filme{
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+.busca-filme button{
+    margin: 0 10px;
+}
+td{
+    font-weight: bold;
+}
+#rating{
+    color: brown;
+}
